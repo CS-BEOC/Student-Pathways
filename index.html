@@ -1,4 +1,4 @@
-<\!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -201,6 +201,34 @@
     height:1px; background:#F0F0F0; margin:2px 0;
   }
 
+  /* ── PATH TABS ── */
+  .path-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .path-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 16px;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.75em;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: white;
+    align-self: flex-start;
+  }
+  .pt-a1 { background: linear-gradient(90deg, #004DC8, #1E88E5); }
+  .pt-b1 { background: linear-gradient(90deg, #E65100, #FB8C00); }
+  .pt-a2 { background: linear-gradient(90deg, #6A1B9A, #AB47BC); }
+  .pt-b2 { background: linear-gradient(90deg, #B71C1C, #EF5350); }
+  .path-content {
+    padding: 12px 16px;
+    background: #F4F6FA;
+    border-radius: 0 8px 8px 8px;
+    border: 1.5px solid #E0E5EE;
+  }
+
   /* ── FOOTER ── */
   .footer {
     background: linear-gradient(90deg, #002569, #004DC8);
@@ -216,7 +244,6 @@
 <body>
 <div class="poster">
 
-  <\!-- HEADER -->
   <div class="header">
     <h1>Your Path Starts Here</h1>
     <div class="org">SUNY BEOC &nbsp;·&nbsp; Student Pathway Map</div>
@@ -231,7 +258,6 @@
     </div>
   </div>
 
-  <\!-- LEGEND -->
   <div class="legend">
     <div class="legend-item"><div class="ld" style="background:#004DC8"></div>ESOL</div>
     <div class="legend-item"><div class="ld" style="background:#B71C1C"></div>HSE</div>
@@ -241,10 +267,8 @@
     <div class="legend-item"><div class="ld" style="background:#00695C"></div>OSHA / Security</div>
   </div>
 
-  <\!-- MAP -->
   <div class="map-area">
 
-    <\!-- SECTION 1: Academic Foundations to Workforce -->
     <div class="section-block s-block-1">
       <div class="section-title">
         <span class="s-num">1</span>
@@ -252,36 +276,41 @@
       </div>
       <div class="section-paths">
 
-        <\!-- Path A: ESOL → HSE → Workforce programs -->
-        <div class="path-row">
-          <div class="node n-esol">ESOL</div>
-          <span class="arr">→</span>
-          <div class="node n-hse">HSE</div>
-          <span class="arr">→</span>
-          <div class="dest-group">
-            <div class="node n-work">Medical Assisting</div>
-            <div class="node n-work">PCT</div>
-            <div class="node n-work">Office Administration</div>
+        <div class="path-group">
+          <div class="path-tab pt-a1">Path A:</div>
+          <div class="path-content">
+            <div class="path-row">
+              <div class="node n-esol">ESOL</div>
+              <span class="arr">→</span>
+              <div class="node n-hse">HSE</div>
+              <span class="arr">→</span>
+              <div class="dest-group">
+                <div class="node n-work">Medical Assisting</div>
+                <div class="node n-work">PCT</div>
+                <div class="node n-work">Office Administration</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="path-divider"></div>
-
-        <\!-- Path B: ESOL + HS Diploma → any workforce directly -->
-        <div class="path-row">
-          <div class="node n-esol">ESOL</div>
-          <span class="badge badge-hs" style="margin:0 4px;">+ HS Diploma</span>
-          <span class="arr">→</span>
-          <div class="shortcut-note">
-            <span class="shortcut-icon">★</span>
-            Move directly into any BEOC workforce program
+        <div class="path-group">
+          <div class="path-tab pt-b1">Path B:</div>
+          <div class="path-content">
+            <div class="path-row">
+              <div class="node n-esol">ESOL</div>
+              <span class="badge badge-hs" style="margin:0 4px;">+ HS Diploma</span>
+              <span class="arr">→</span>
+              <div class="shortcut-note">
+                <span class="shortcut-icon">★</span>
+                Move directly into any BEOC workforce program
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <\!-- SECTION 2: Academic Foundations to College -->
     <div class="section-block s-block-2">
       <div class="section-title">
         <span class="s-num">2</span>
@@ -289,32 +318,37 @@
       </div>
       <div class="section-paths">
 
-        <\!-- Path A: ESOL → HSE → College Prep → College Enrollment -->
-        <div class="path-row">
-          <div class="node n-esol">ESOL</div>
-          <span class="arr">→</span>
-          <div class="node n-hse">HSE</div>
-          <span class="arr">→</span>
-          <div class="node n-cprep">College Preparation</div>
-          <span class="arr">→</span>
-          <div class="node n-cenrl">College Enrollment</div>
+        <div class="path-group">
+          <div class="path-tab pt-a2">Path A:</div>
+          <div class="path-content">
+            <div class="path-row">
+              <div class="node n-esol">ESOL</div>
+              <span class="arr">→</span>
+              <div class="node n-hse">HSE</div>
+              <span class="arr">→</span>
+              <div class="node n-cprep">College Preparation</div>
+              <span class="arr">→</span>
+              <div class="node n-cenrl">College Enrollment</div>
+            </div>
+          </div>
         </div>
 
-        <div class="path-divider"></div>
-
-        <\!-- Path B: HSE → College Prep → College Enrollment -->
-        <div class="path-row">
-          <div class="node n-hse">HSE</div>
-          <span class="arr">→</span>
-          <div class="node n-cprep">College Preparation</div>
-          <span class="arr">→</span>
-          <div class="node n-cenrl">College Enrollment</div>
+        <div class="path-group">
+          <div class="path-tab pt-b2">Path B:</div>
+          <div class="path-content">
+            <div class="path-row">
+              <div class="node n-hse">HSE</div>
+              <span class="arr">→</span>
+              <div class="node n-cprep">College Preparation</div>
+              <span class="arr">→</span>
+              <div class="node n-cenrl">College Enrollment</div>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
 
-    <\!-- SECTION 3: Direct Workforce — No HS Diploma Required -->
     <div class="section-block s-block-3">
       <div class="section-title">
         <span class="s-num">3</span>
@@ -339,7 +373,6 @@
       </div>
     </div>
 
-    <\!-- SECTION 4: Stacked or Concurrent -->
     <div class="section-block s-block-4">
       <div class="section-title">
         <span class="s-num">4</span>
@@ -375,9 +408,8 @@
       </div>
     </div>
 
-  </div><\!-- end map-area -->
+  </div>
 
-  <\!-- FOOTER -->
   <div class="footer">
     SUNY BEOC &nbsp;·&nbsp; State University of New York Educational Opportunity Center
   </div>
